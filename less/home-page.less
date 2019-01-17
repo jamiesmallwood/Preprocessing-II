@@ -6,6 +6,11 @@
 
     img {
       padding-bottom: 30px;
+      .transition(all, 0.5s, ease-in);
+
+      &:hover {
+        opacity: .5;
+      }
     }
     
   }
@@ -37,6 +42,12 @@
 
       img {
         border-radius: 10px;
+        .transition(all, 0.5s, ease-in);
+
+        &:hover {
+          opacity: .5;
+        }
+
         @media @mobile {
             width: 100%;
         }
@@ -71,6 +82,11 @@
 
     img {
       border-radius: 10px;
+      .transition(all, 0.5s, ease-in);
+
+      &:hover {
+        opacity: .5;
+      }
     }
   }
 
@@ -94,11 +110,17 @@
       }
 
       .btn {
-       .button(@dark-green; @white; 15px; 15px);
-       font-size: 1.6rem;
-       max-width: 80%;
-       text-align: center;
-       border: 1px solid @navigation-border;
+        .button(@dark-green; @white; 15px; 15px);
+        font-size: 1.6rem;
+        max-width: 80%;
+        text-align: center;
+        border: 1px solid @navigation-border;
+        .transition(all, 0.2s, ease-in);
+
+        &:hover {
+          background-color: spin(hsl(10, 90%, 50%), 30);
+        }
+
        @media @mobile {
          margin: 0 auto;
          max-width: 100%;
