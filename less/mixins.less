@@ -1,1 +1,16 @@
 // Mixins in here
+
+.button(@background-color; @color; @padding; @radius) {
+    background-color: @background-color;
+    color: @color;
+    padding: @padding;
+    border-radius: @radius;
+}
+
+.transition (@prop: all, @time: 1s, @ease: linear) {
+	-webkit-transition: @prop @time @ease;
+	-moz-transition: @prop @time @ease;
+	-o-transition: @prop @time @ease;
+	-ms-transition: @prop @time @ease;
+	transition: @prop @time @ease;
+}

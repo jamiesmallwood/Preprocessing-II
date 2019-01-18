@@ -1,24 +1,56 @@
 .home {
 
+  header {
+
+    border-bottom: 2px dashed @navigation-border;
+
+    img {
+      padding-bottom: 30px;
+      .transition(all, 0.5s, ease-in);
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+    
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
+    @media @mobile {
+      flex-direction: column;
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile {
+        width: 100%;
+        text-align: center;
+      }
 
       img {
         border-radius: 10px;
+        .transition(all, 0.5s, ease-in);
+
+        &:hover {
+          opacity: .5;
+        }
+
+        @media @mobile {
+            width: 100%;
+        }
       }
     }
   }
@@ -35,15 +67,26 @@
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobile {
+        order: 1;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @mobile {
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
+      .transition(all, 0.5s, ease-in);
+
+      &:hover {
+        opacity: .5;
+      }
     }
   }
 
@@ -52,10 +95,38 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile {
+      flex-direction: column;
+      justify-content: center;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile {
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+      }
+
+      .btn {
+        .button(@dark-green; @white; 15px; 15px);
+        font-size: 1.6rem;
+        max-width: 80%;
+        text-align: center;
+        border: 1px solid @navigation-border;
+        .transition(all, 0.2s, ease-in);
+
+        &:hover {
+          background-color: spin(hsl(10, 90%, 50%), 30);
+        }
+
+       @media @mobile {
+         margin: 0 auto;
+         max-width: 100%;
+         background-color: @eastern-blue;
+       }
+      }
     }
   }
 }// home
